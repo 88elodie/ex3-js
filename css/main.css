@@ -1,0 +1,7 @@
+article .nom, article .prenom, article .debut, article .fin {
+    width: 150px;
+    display: inline-block;
+}
+.titre {
+    font-weight: bold;
+}

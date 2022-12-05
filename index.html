@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exercice 3 : Les maires alldress ! (Fetch, Routeur et Gabarit)</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="./css/main.css" rel="stylesheet">
+    <script type="module" src="main.js"></script>
+</head>
+
+<body>
+    <h1>Les maires</h1>
+    <a href="#!/recherche">Rechercher</a>
+    <a href="#!/liste">Liste</a>
+
+    <main>
+
+    </main>
+
+    <!-- Représente les gabarits à utiliser pour l'affichage de la route #!/recherche-->
+    <script type="tmpl" id="tmpl_recherche">
+        <section class="recherche">
+            <label>Nom ou date : </label><input type="text" class="champ-recherche"><button
+                class="btn-recherche-nom">Trouver un maire par nom</button><button class="btn-recherche-date">Trouver un
+                maire par date</button>
+        </section>
+        <section class="affichage-maire">
+            <section class="titre">
+                <article class="unMaire">
+                    <span class="nom">Nom</span>
+                    <span class="prenom">Prénom</span>
+                    <span class="debut">Début</span>
+                    <span class="fin">Fin</span>
+                </article>
+            </section>
+            <section id="insert_rangee">
+                <!-- Point d'insertion des données-->
+            </section>
+        </section>
+
+    </script>
+
+    <!-- Représente les gabarits à utiliser pour l'affichage de la route #!/liste-->
+    <script type="tmpl" id="tmpl_liste">
+        <section class="liste">
+            <label>Ordre</label>
+            <input type="radio" name="ordre" value="ASC">ASC
+            <input type="radio" name="ordre" value="DESC">DESC
+            <button class="btn-liste-nom">Liste par nom</button><button class="btn-liste-date">Liste par date</button>
+        </section>
+
+        <section class="affichage-maire">
+            <section class="titre">
+                <article class="unMaire">
+                    <span class="nom">Nom</span>
+                    <span class="prenom">Prénom</span>
+                    <span class="debut">Début</span>
+                    <span class="fin">Fin</span>
+                </article>
+            </section>
+            <section id="insert_rangee">
+                <!-- Point d'insertion des données-->
+            </section>
+        </section>
+    </script>
+
+    <!-- Représente les gabarits à utiliser pour l'affichage des données -->
+    <script type="tmpl" id="tmpl_rangee">
+        <article class="unMaire">
+            <span class="nom">{{nom}}</span>
+            <span class="prenom">{{prenom}}</span>
+            <span class="debut">{{debut}}</span>
+            <span class="fin">{{fin}}</span>
+        </article>
+    </script>
+</body>
+
+</html>
